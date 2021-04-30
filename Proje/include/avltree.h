@@ -9,7 +9,7 @@ typedef struct node
     int height;
 }node;
  
- 
+ //test
 void dispose(node* t);
 node* find( int e, node *t );
 node* find_min( node *t );
