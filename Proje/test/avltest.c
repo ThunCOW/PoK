@@ -3,7 +3,7 @@
  
 int main()
 {
-    node *t ;
+    node *t;
     int i;
     int j = 0;
     const int max = 10;
