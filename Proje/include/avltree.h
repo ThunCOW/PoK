@@ -1,6 +1,6 @@
 #ifndef AVLTREE_H_INCLUDED
 #define AVLTREE_H_INCLUDED
- 
+
 typedef struct node
 {
     int data;
@@ -8,8 +8,17 @@ typedef struct node
     struct node* right;
     int height;
 }node;
+
+typedef struct AVLtree {
+    node* ds;
+    //node* (*init)();
+    node* (*add)();
+    //void (*max)();
+    void (*print)();
+}avltree;
  
- //test
+avltree* avlnew(void);
+ //test2
 void dispose(node* t);
 node* find( int e, node *t );
 node* find_min( node *t );

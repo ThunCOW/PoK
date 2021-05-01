@@ -1,9 +1,29 @@
 #include <stdio.h>
-#include "avltree.h"
- 
+#include <avltree.h>
+
+ int Ekle(int k, avltree* l){
+        l->ds = l->add(k, l->ds);
+    return 0;
+}
+
 int main()
 {
-    node *t;
+    avltree* c=avlnew();
+    Ekle(7,c);
+    Ekle(4,c);
+    Ekle(1,c);
+    Ekle(8,c);
+    Ekle(5,c);
+    Ekle(2,c);
+    Ekle(9,c);
+    Ekle(6,c);
+    Ekle(3,c);
+    Ekle(0,c);
+    c->print(c->ds);
+    //display_avl(c->ds);
+    printf("deneme \n");
+
+    /*node *t;
     int i;
     int j = 0;
     const int max = 10;
@@ -24,7 +44,7 @@ int main()
  
     display_avl(t);
  
-    dispose(t);
+    dispose(t);*/
  
     return 0;
 }

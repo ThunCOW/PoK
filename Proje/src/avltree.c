@@ -153,6 +153,13 @@ static node* double_rotate_with_right( node* k1 )
 /*
     insert a new node into the tree
 */
+avltree* avlnew(void){
+    avltree* tree=malloc(sizeof(avltree));
+    tree->ds=NULL;
+    tree->add=insert;
+    tree->print=display_avl;
+}
+
 node* insert(int e, node* t )
 {
     if(t == NULL)
@@ -217,8 +224,9 @@ int get(node* n)
 */
 void display_avl(node* t)
 {
-    if (t == NULL)
-        return;
+    if (t == NULL){
+        return 0;
+    }
     printf("%d",t->data);
  
     if(t->left != NULL)
