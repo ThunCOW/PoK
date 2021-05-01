@@ -21,7 +21,7 @@ lib/libtests.a: $(OBJS)
 avlnew: test/avltest.c lib/libtests.a
 	$(CC) $(CFLAGS) $< -o $@ -ltests
 
-skptest: test/skiptest.c lib/libtests.a
+skptest: test/skiptest2.c lib/libtests.a
 	$(CC) $(CFLAGS) $< -o $@ -ltests
 
 sstest: test/shelltest.c lib/libtests.a
